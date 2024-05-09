@@ -9,7 +9,7 @@ const clientId = process.env.NEXT_PUBLIC_PASSPORT_CLIENT_ID;
 if (!clientId) throw new Error("Client ID is not defined");
 
 const redirectUri = process.env.NEXT_PUBLIC_PASSPORT_REDIRECT_URI;
-if (!redirectUri) throw new Error("Redirect URI is not defined");
+if (!redirectUri) throw new Error("Redirect URI not defined");
 
 export const passportInstance = new Passport({
   baseConfig,
