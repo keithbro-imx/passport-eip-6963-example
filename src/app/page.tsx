@@ -8,7 +8,7 @@ function ConnectButton() {
 }
 
 export default function Home() {
-  const { address, isConnecting, isDisconnected, isConnected } = useAccount();
+  const { isConnected } = useAccount();
   const { writeContract } = useWriteContract();
   const { signMessageAsync } = useSignMessage();
 
