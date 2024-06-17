@@ -21,7 +21,8 @@ export default function Home() {
   };
 
   const signImportantMessage = async () => {
-    await signMessageAsync({ message: "Important message" });
+    const res = await signMessageAsync({ message: "Important message" });
+    console.log({ res });
   };
 
   return (
