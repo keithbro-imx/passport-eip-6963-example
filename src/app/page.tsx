@@ -3,7 +3,14 @@
 import { abi } from "@/abi";
 import { passportInstance } from "@/passport";
 import { useState } from "react";
-import { Hex, getContract, keccak256, parseAbi, stringToBytes } from "viem";
+import {
+  Hex,
+  getContract,
+  hashMessage,
+  keccak256,
+  parseAbi,
+  stringToBytes,
+} from "viem";
 import {
   useAccount,
   usePublicClient,
@@ -58,6 +65,8 @@ export default function Home() {
     });
 
     const digest = keccak256(stringToBytes(TEST_MESSAGE));
+    const digest2 = hashMessage(TEST_MESSAGE);
+    console.log({ digest, digest2 });
     const res = await walletContract.read.isValidSignature([digest, signature]);
     const valid = res === ERC_1271_MAGIC_VALUE;
 
