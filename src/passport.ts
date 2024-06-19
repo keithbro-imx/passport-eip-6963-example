@@ -21,6 +21,7 @@ export const passportInstance = new Passport({
   logoutRedirectUri,
   audience: "platform_api",
   scope: "openid offline_access email transact",
+  logoutMode: "redirect",
 });
 
 passportInstance.connectEvm();

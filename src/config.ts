@@ -2,6 +2,7 @@ import { defaultWagmiConfig } from "@web3modal/wagmi/react/config";
 
 import { cookieStorage, createStorage } from "wagmi";
 import { Chain, mainnet, sepolia } from "wagmi/chains";
+import { injected } from "wagmi/connectors";
 
 // Get projectId at https://cloud.walletconnect.com
 export const projectId = process.env.NEXT_PUBLIC_PROJECT_ID;
@@ -25,6 +26,10 @@ const immutable = {
 // Create wagmiConfig
 const chains = [immutable] as const;
 export const config = defaultWagmiConfig({
+  enableWalletConnect: false,
+  enableEIP6963: true,
+  enableInjected: false,
+  enableCoinbase: false,
   chains,
   projectId,
   metadata,
