@@ -3,14 +3,7 @@
 import { abi } from "@/abi";
 import { passportInstance } from "@/passport";
 import { useState } from "react";
-import {
-  Hex,
-  getContract,
-  hashMessage,
-  keccak256,
-  parseAbi,
-  stringToBytes,
-} from "viem";
+import { Hex } from "viem";
 import {
   useAccount,
   usePublicClient,
@@ -23,7 +16,6 @@ function ConnectButton() {
 }
 
 const TEST_MESSAGE = "Important Message";
-const ERC_1271_MAGIC_VALUE = "0x1626ba7e";
 
 export default function Home() {
   const [signature, setSignature] = useState<Hex | null>(null);
@@ -52,27 +44,18 @@ export default function Home() {
   };
 
   const verifyMessage = async () => {
-    if (!client) throw new Error("Client not found");
+    if (!client) throw new Error("Public client not found");
     if (!signature) throw new Error("Signature not found");
     if (!address) throw new Error("Address not found");
 
-    const walletContract = getContract({
-      abi: parseAbi([
-        "function isValidSignature(bytes32, bytes) public view returns (bytes4)",
-      ]),
+    const res = await client.verifyMessage({
+      signature,
       address,
-      client,
+      message: TEST_MESSAGE,
     });
-
-    const digest = keccak256(stringToBytes(TEST_MESSAGE));
-    const digest2 = hashMessage(TEST_MESSAGE);
-    console.log({ digest, digest2 });
-    const res = await walletContract.read.isValidSignature([digest, signature]);
-    const valid = res === ERC_1271_MAGIC_VALUE;
 
     console.log({
       res,
-      valid,
     });
   };
 

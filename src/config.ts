@@ -23,12 +23,12 @@ const immutable = {
 } as const satisfies Chain;
 
 // Create wagmiConfig
-const chains = [immutable, sepolia] as const;
+const chains = [immutable] as const;
 export const config = defaultWagmiConfig({
   enableWalletConnect: true,
   enableEIP6963: true,
   enableInjected: false,
-  enableCoinbase: true,
+  enableCoinbase: false,
   chains,
   projectId,
   metadata,

@@ -812,10 +812,10 @@
     "@segment/analytics-next" "^1.53.2"
     react "^18.2.0"
 
-"@imtbl/sdk@1.42.1-alpha.4":
-  version "1.42.1-alpha.4"
-  resolved "https://registry.yarnpkg.com/@imtbl/sdk/-/sdk-1.42.1-alpha.4.tgz#61b29837ef5f66a2a5404678cfa10a66e4ea4df1"
-  integrity sha512-Duz+B6q9ZPNn569WkwTfeY3GqhjXCLEPEVcnDUGP1r7evVY7tx6iD65ILQ+NejW55Cm/8jOsLqsnVFMk7mxwYg==
+"@imtbl/sdk@1.43.5":
+  version "1.43.5"
+  resolved "https://registry.yarnpkg.com/@imtbl/sdk/-/sdk-1.43.5.tgz#06259c0175a882d5bec067b070aa349f13dbab6a"
+  integrity sha512-JfQggDDz6d7Slyx8Udn1FcWrdPqy3epYlMEFiE6qxQwPIvJLrRZfeD08LMbgXTy784pju4vtcXZwT3vk7ECLOQ==
   dependencies:
     "@0xsequence/abi" "^1.4.3"
     "@0xsequence/core" "^1.4.3"
@@ -856,6 +856,7 @@
     jwt-decode "^3.1.2"
     lru-memorise "0.3.0"
     magic-sdk "^21.2.0"
+    merkletreejs "^0.3.11"
     oidc-client-ts "2.4.0"
     os-browserify "^0.3.0"
     pako "^2.1.0"
