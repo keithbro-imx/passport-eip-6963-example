@@ -2,7 +2,7 @@ import { ImmutableConfiguration, Environment } from "@imtbl/sdk/config";
 import { Passport } from "@imtbl/sdk/passport";
 
 const baseConfig: ImmutableConfiguration = {
-  environment: Environment.PRODUCTION,
+  environment: Environment.SANDBOX,
 };
 
 const clientId = process.env.NEXT_PUBLIC_PASSPORT_CLIENT_ID;

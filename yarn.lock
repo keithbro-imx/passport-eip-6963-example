@@ -812,10 +812,10 @@
     "@segment/analytics-next" "^1.53.2"
     react "^18.2.0"
 
-"@imtbl/sdk@1.43.5":
-  version "1.43.5"
-  resolved "https://registry.yarnpkg.com/@imtbl/sdk/-/sdk-1.43.5.tgz#06259c0175a882d5bec067b070aa349f13dbab6a"
-  integrity sha512-JfQggDDz6d7Slyx8Udn1FcWrdPqy3epYlMEFiE6qxQwPIvJLrRZfeD08LMbgXTy784pju4vtcXZwT3vk7ECLOQ==
+"@imtbl/sdk@1.44.0":
+  version "1.44.0"
+  resolved "https://registry.yarnpkg.com/@imtbl/sdk/-/sdk-1.44.0.tgz#308521de28544caf0de1cc05b554119061c5e3c9"
+  integrity sha512-z4wZphIjb7HiHolumw/ybqS5Ao+pTx2hZVgrv+daFbVGMDEKiCImopssf3PAksJnXlRaoZEzhcmHAv9bbVEcSQ==
   dependencies:
     "@0xsequence/abi" "^1.4.3"
     "@0xsequence/core" "^1.4.3"
@@ -831,7 +831,7 @@
     "@jest/globals" "^29.5.0"
     "@magic-ext/oidc" "4.2.0"
     "@metamask/detect-provider" "^2.0.0"
-    "@opensea/seaport-js" "4.0.2"
+    "@opensea/seaport-js" "4.0.3"
     "@rive-app/react-canvas-lite" "^4.9.0"
     "@stdlib/number-float64-base-normalize" "0.0.8"
     "@uniswap/router-sdk" "^1.4.0"
@@ -1412,10 +1412,10 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
-"@opensea/seaport-js@4.0.2":
-  version "4.0.2"
-  resolved "https://registry.yarnpkg.com/@opensea/seaport-js/-/seaport-js-4.0.2.tgz#7a7601edb54bdbd9a039c5752682f48cca1dfbf3"
-  integrity sha512-baZL4Gh+qKSy/a5KX4Fhzn48Rqle0tyWVxs3GajZTZppWwGp2ggLCJJZuROeoDnvpdxr1jwU3E9Nt0HNat/KVA==
+"@opensea/seaport-js@4.0.3":
+  version "4.0.3"
+  resolved "https://registry.yarnpkg.com/@opensea/seaport-js/-/seaport-js-4.0.3.tgz#21ebc6d3f05a6c6905e476d0fe8bae9b32917812"
+  integrity sha512-LJjeX3ocMu6/eWxB7huXlXVfjq9tFkIyhtW4F/BsPuEnGI5AOR5nfx2tHs7qMAH9GODfTNtu9M9ZPdjxYTtK3w==
   dependencies:
     ethers "^6.9.0"
     merkletreejs "^0.3.11"

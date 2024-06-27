@@ -22,8 +22,15 @@ const immutable = {
   nativeCurrency: { name: "IMX", symbol: "IMX", decimals: 18 },
 } as const satisfies Chain;
 
+const immutableTestnet = {
+  id: 13473,
+  name: "Immutable Testnet",
+  rpcUrls: { default: { http: ["https://rpc.testnet.immutable.com"] } },
+  nativeCurrency: { name: "IMX", symbol: "IMX", decimals: 18 },
+} as const satisfies Chain;
+
 // Create wagmiConfig
-const chains = [immutable] as const;
+const chains = [immutableTestnet] as const;
 export const config = defaultWagmiConfig({
   enableWalletConnect: true,
   enableEIP6963: true,
