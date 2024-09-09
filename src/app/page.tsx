@@ -59,11 +59,15 @@ export default function Home() {
   });
 
   const claimGem = async () => {
-    writeContract({
-      abi,
-      address: "0x3f04d7a7297d5535595eE0a30071008B54E62A03",
-      functionName: "earnGem",
-    });
+    try {
+      writeContract({
+        abi,
+        address: "0x3f04d7a7297d5535595eE0a30071008B54E62A03",
+        functionName: "earnGem",
+      });
+    } catch (e) {
+      console.error(e);
+    }
   };
 
   const signImportantMessage = async () => {
