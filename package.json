@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@imtbl/sdk": "1.51.4",
+    "@imtbl/sdk": "1.47.7",
     "@tanstack/react-query": "^5.35.1",
     "@web3modal/wagmi": "^4.1.11",
     "next": "14.2.3",

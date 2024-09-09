@@ -820,10 +820,10 @@
     "@segment/analytics-next" "^1.53.2"
     react "^18.2.0"
 
-"@imtbl/sdk@1.51.4":
-  version "1.51.4"
-  resolved "https://registry.yarnpkg.com/@imtbl/sdk/-/sdk-1.51.4.tgz#652a90c7bd26f92d0127afa68c3ab81620ae7c63"
-  integrity sha512-fCxIGn3viYzJiwi0gCgV01KzMS9irSc8XPogSjXukRsaG69YZbLr6nrhR2kG1BY9jCTjjQCcSzuCcdPdHjzVHA==
+"@imtbl/sdk@1.47.7":
+  version "1.47.7"
+  resolved "https://registry.yarnpkg.com/@imtbl/sdk/-/sdk-1.47.7.tgz#252a8a01690572e7beb1658fd7cc51eee54e54d6"
+  integrity sha512-k5fokuOSpuu6CmzKo31R3UefXz+xXnsGYikgosumS/imh+/cHUs7dL3Qn8nHV1Eq9TZT9YFwWSnuxnSLhXAccQ==
   dependencies:
     "@0xsequence/abi" "^1.4.3"
     "@0xsequence/core" "^1.4.3"
@@ -852,7 +852,7 @@
     bn.js "^5.2.1"
     buffer "^6.0.3"
     crypto-browserify "^3.12.0"
-    elliptic "^6.5.7"
+    elliptic "^6.5.4"
     enc-utils "^3.0.0"
     ethereumjs-wallet "^1.0.2"
     ethers "^5.7.2"
@@ -4774,19 +4774,6 @@ elliptic@^6.4.0, elliptic@^6.5.3, elliptic@^6.5.4, elliptic@^6.5.5:
   version "6.5.5"
   resolved "https://registry.npmjs.org/elliptic/-/elliptic-6.5.5.tgz"
   integrity sha512-7EjbcmUm17NQFu4Pmgmq2olYMj8nwMnpcddByChSUjArp8F5DQWcIcpriwO4ZToLNAJig0yiyjswfyGNje/ixw==
-  dependencies:
-    bn.js "^4.11.9"
-    brorand "^1.1.0"
-    hash.js "^1.0.0"
-    hmac-drbg "^1.0.1"
-    inherits "^2.0.4"
-    minimalistic-assert "^1.0.1"
-    minimalistic-crypto-utils "^1.0.1"
-
-elliptic@^6.5.7:
-  version "6.5.7"
-  resolved "https://registry.yarnpkg.com/elliptic/-/elliptic-6.5.7.tgz#8ec4da2cb2939926a1b9a73619d768207e647c8b"
-  integrity sha512-ESVCtTwiA+XhY3wyh24QqRGBoP3rEdDUl3EDUUo9tft074fi19IrdpH7hLCMMP3CIj7jb3W96rn8lt/BqIlt5Q==
   dependencies:
     bn.js "^4.11.9"
     brorand "^1.1.0"
