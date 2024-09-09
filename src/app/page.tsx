@@ -45,7 +45,7 @@ export default function Home() {
         message: TEST_MESSAGE,
       });
 
-      console.log({ res });
+      console.log(`Verified: ${res}`);
     } catch (e) {
       console.error(e);
     }
