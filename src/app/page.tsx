@@ -6,6 +6,7 @@ import { useState } from "react";
 import { Hex, getContract, hashMessage, parseAbi } from "viem";
 import {
   useAccount,
+  useAccountEffect,
   usePublicClient,
   useSignMessage,
   useWriteContract,
@@ -25,6 +26,36 @@ export default function Home() {
   const { isConnected, address } = useAccount();
   const { writeContract } = useWriteContract();
   const { signMessageAsync } = useSignMessage();
+
+  const signAndVerify = async (address: `0x${string}`) => {
+    if (!client) throw new Error("Public client not found");
+
+    try {
+      console.log("before signMessageAsync");
+
+      const signature = await signMessageAsync({
+        message: TEST_MESSAGE,
+      });
+
+      console.log({ signature });
+
+      const res = await client.verifyMessage({
+        signature,
+        address,
+        message: TEST_MESSAGE,
+      });
+
+      console.log({ res });
+    } catch (e) {
+      console.error(e);
+    }
+  };
+
+  useAccountEffect({
+    onConnect: async ({ address }) => {
+      console.log({ address });
+    },
+  });
 
   const claimGem = async () => {
     writeContract({
@@ -89,7 +120,7 @@ export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center gap-4 p-24 bg-black text-white">
       <ConnectButton />
-      {isConnected ? (
+      {isConnected && address ? (
         <>
           <button
             className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
@@ -102,6 +133,12 @@ export default function Home() {
             onClick={signImportantMessage}
           >
             Sign Important Message
+          </button>
+          <button
+            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+            onClick={() => signAndVerify(address)}
+          >
+            Sign & Verify
           </button>
           {signature && (
             <button
@@ -117,14 +154,15 @@ export default function Home() {
           >
             Alt Verify Signature
           </button>
-          <button
-            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-            onClick={() => passportInstance.logout()}
-          >
-            Disconnect (workaround)
-          </button>
         </>
       ) : null}
+
+      <button
+        className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+        onClick={() => passportInstance.logout()}
+      >
+        Disconnect (workaround)
+      </button>
     </main>
   );
 }
