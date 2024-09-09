@@ -22,6 +22,7 @@ export const passportInstance = new Passport({
   audience: "platform_api",
   scope: "openid offline_access email transact",
   logoutMode: "redirect",
+  forceScwDeployBeforeMessageSignature: true,
 });
 
 passportInstance.connectEvm();
