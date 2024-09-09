@@ -820,10 +820,10 @@
     "@segment/analytics-next" "^1.53.2"
     react "^18.2.0"
 
-"@imtbl/sdk@^1.51.5-alpha.5":
-  version "1.51.5-alpha.5"
-  resolved "https://registry.yarnpkg.com/@imtbl/sdk/-/sdk-1.51.5-alpha.5.tgz#1d401878bdfbefe0a8710273e1eee82bd150930c"
-  integrity sha512-wEQ9LsOkzq4eP+8NRCs1S1cqWYhqmq8JBy1kMFYrQuVkNYHke2Gs2pZx4QM0eMhzmsB2R7eWuvwMCZpi/rl+Lg==
+"@imtbl/sdk@1.51.4":
+  version "1.51.4"
+  resolved "https://registry.yarnpkg.com/@imtbl/sdk/-/sdk-1.51.4.tgz#652a90c7bd26f92d0127afa68c3ab81620ae7c63"
+  integrity sha512-fCxIGn3viYzJiwi0gCgV01KzMS9irSc8XPogSjXukRsaG69YZbLr6nrhR2kG1BY9jCTjjQCcSzuCcdPdHjzVHA==
   dependencies:
     "@0xsequence/abi" "^1.4.3"
     "@0xsequence/core" "^1.4.3"
