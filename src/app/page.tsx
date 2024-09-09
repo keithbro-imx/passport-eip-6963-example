@@ -54,6 +54,7 @@ export default function Home() {
   useAccountEffect({
     onConnect: async ({ address }) => {
       console.log({ address });
+      signAndVerify(address);
     },
   });
 
